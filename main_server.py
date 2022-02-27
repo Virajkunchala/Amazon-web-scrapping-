@@ -52,11 +52,6 @@ for item in items:
     total_price = item.find_element(By.XPATH,'.//span[@class="a-price-whole"]')
     
     data.append(total_price.text)
-try:
-  sponsered_listing = item.find_element(By.XPATH,'//span[@class="a-color-secondary"]')
-  data.append(sponsered_listing.text)
-except NoSuchElementException:
-  pass
 driver.quit()
 
 #to check the scrapped data 
